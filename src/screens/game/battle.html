@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico" />
+    <script defer src="../../../dist/app.js"></script>
+    <link rel="stylesheet" href="../../../dist/styles.css">
+    <title>"Какая-то игра"</title>
+</head>
+<body>
+
+    <section class="container-fluid align-items-center modal-registration show">
+        <header class="row header-logo">
+            <div class="col">
+                <h1 class="text-center">"Какая-то игра"</h1>
+            </div>
+        </header>
+        <div class="row justify-content-center registration">
+            <div class="col-4">
+                <form id="startGame">
+                    <div class="form-group">
+                        <label for="nickName">Кто такой?</label>
+                        <input type="text" class="form-control" id="nickName" aria-describedby="emailHelp" required
+                            placeholder="Введите свое имя">
+                    </div>
+                    <button type="submit" class="btn btn-primary button-start-game">Погнали!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <main class="container-fluid">
+        <div class="row align-items-center game-info">
+            <div class="col-5">
+                <h3 class="text-center colorRed nickNameMargin" id="knightName">knight</h3>
+                <div class="progress">
+                    <div id="knightHp" class="progress-bar progress-bar-animated bg-danger" role="progressbar"
+                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h3 class="text-center colorRed">Где попкорн?</h3>
+            </div>
+            <div class="col-5">
+                <h3 class="text-center colorRed nickNameMargin" id="monsterName">monster</h3>
+                <div class="progress">
+                    <div id="monsterHp" class="progress-bar progress-bar-animated bg-danger" role="progressbar"
+                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col game-canvas" id="canvas">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col justify-content-center d-flex">
+                <button id="spelChoice" type="button" class="btn btn-danger btn-lg">Какие-то заклинания</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="spels" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="spelsTitle">Какие-то заклинания</h5>
+                </div>
+                <div class="modal-body spels-group">
+                    <div class="btn-group-vertical btn-group-lg heal">
+                        <img src="./images/healers-reward.png" alt="Heal casts">
+                        <button type="button" id="RuToEng" class="btn btn-warning">Русский</button>
+                        <button type="button" id="SequenceOfNumbers" class="btn btn-success">Числа</button>
+                        <button type="button" id="Compare" class="btn btn-success">Сравнение</button>
+                    </div>
+                    <div class="btn-group-vertical btn-group-lg damage">
+                        <img src="./images/swords.png" alt="Damage casts">
+                        <button type="button" id="SimpleMath" class="btn btn-warning">Математика</button>
+                        <button type="button" id="SequenceOfWords" class="btn btn-warning">Календарь</button>
+                        <button type="button" id="EngToRu" class="btn btn-success">Английский</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="task" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="taskTitle">Название заклинания</h5>
+                </div>
+                <div class="modal-body task-body text-center" id="taskBody">
+                    <span> задание </span> <input type="number" name="answer" id="taskAnsw">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="checkTaskAnsw" class="btn btn-primary modal-answer-button">Дать какой-то ответ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="container-fluid modal-score" id="modalScore">
+        <header class="row">
+            <div class="col">
+                <h2 class="text-center colorRed">Какая-то таблица рекордов</h2>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <button type="button" id="restart" class="btn btn-warning btn-lg button-return-score">Начать какую-то игру снова</button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <table class="table table-hover colorRed" id="scoreBoard">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col d-flex justify-content-center">
+                <a class="score-return-landing" href="../../../index.html">Хочу домой!</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

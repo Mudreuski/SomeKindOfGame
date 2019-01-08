@@ -1,1 +1,2 @@
-# SomeKindOfGame
+
+Some kind of game
