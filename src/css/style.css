@@ -16,14 +16,14 @@
   }
 
 body {
-    background: #101327 url('/assets/background/game_background.png') no-repeat fixed;
+    background: #101327 url('SomeKindOfGame/assets/background/game_background.png') no-repeat fixed;
     background-size: cover;
     color: #ffffff;
 }
 
 .modal-registration {
     height: 100%;
-    background: #101327 url('/assets/background/game_background.png') no-repeat;
+    background: #101327 url('SomeKindOfGame/assets/background/game_background.png') no-repeat;
     background-size: cover;
     color: #f70808;
     position: fixed;
@@ -37,7 +37,7 @@ body {
 
 .modal-score {
   height: 100%;
-  background: #101327 url('/assets/background/game_background.png') no-repeat;
+  background: #101327 url('SomeKindOfGame/assets/background/game_background.png') no-repeat;
   background-size: cover;
   color: #f70808;
   position: fixed;
